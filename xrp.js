@@ -11,3 +11,14 @@ function getNet() {
     if (document.getElementById("dn").checked) net = "wss://s.devnet.rippletest.net:51233"
     return net
 } // End of getNet()
+// *******************************************************
+// ************* Get Account *****************************
+// *******************************************************
+
+
+async function getAccount(type) {
+    let net = getNet()
+    const client = new xrpl.Client(net)
+    results = 'Connecting to ' + getNet() + '....'
+    const walletServer = net
+}
