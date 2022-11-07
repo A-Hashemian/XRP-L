@@ -21,4 +21,10 @@ async function getAccount(type) {
     const client = new xrpl.Client(net)
     results = 'Connecting to ' + getNet() + '....'
     const walletServer = net
+
+    if (type == 'standby') {
+        document.getElementById('standbyResultField').value = results
+    } else {
+        document.getElementById('operationalResultField').value = results
+    }
 }
